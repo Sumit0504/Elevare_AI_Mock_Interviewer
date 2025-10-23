@@ -30,6 +30,7 @@ const Agent = ({userName} : AgentProps) => {
                 </div>
                 <h3>AI Interviewer</h3>
             </div>
+            
             <div className='card-border'>
                 <div className='card-content'>
                     <Image src="/user-avatar.png" alt="User Avatar" width={540} height={540} className='rounded-full object-cover size-[120px]'/>
