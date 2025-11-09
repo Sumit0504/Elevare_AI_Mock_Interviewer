@@ -7,6 +7,7 @@ import { redirect } from 'next/navigation';
  const Rootlayout = async ({children} : {children : ReactNode}) => {
   const isUserAuthenticated = await isAuthenticated();
   if(!isUserAuthenticated) redirect('/sign-in');
+
   return (
     <div className='root-layout'>
       <nav>

@@ -1,4 +1,5 @@
 import { db } from '@/firebase/admin';
+import { google } from "@ai-sdk/google";
 import { getRandomInterviewCover } from '@/lib/utils';
 import { generateText } from 'ai';
 import { success } from "zod";
@@ -38,7 +39,7 @@ export async function POST(request: Request){
 
         await db.collection('interviews').add(interview);
 
-        return Response.json({success: true}, status:200)
+        return Response.json({success: true}, {status : 200})
     }catch(e){
         console.error(e);
 
